@@ -1,0 +1,6 @@
+{
+  "OPEN_WEATHER_API": {
+    "BASE_URL": "http://api.openweathermap.org",
+    "APP_ID": "2ef1c4ba1c44f6279a4d24233e7a48f1"
+  }
+}

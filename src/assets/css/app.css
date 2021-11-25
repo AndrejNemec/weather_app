@@ -1,0 +1,489 @@
+/*
+ #########################
+
+   GLOBAL STYLES
+
+ #########################
+*/
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', sans-serif;
+}
+
+body {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Weather sunny image */
+img.weather-image {
+    position: fixed;
+    width: 100%;
+    max-width: 600px;
+    min-height: 300px;
+    max-height: 440px;
+}
+
+/*
+ #########################
+
+   TEXT FIELD COMPONENT
+
+ #########################
+*/
+
+/* Text field container */
+.text-field-container {
+    position: relative;
+}
+
+/* Text field */
+.text-field {
+    /* Sizes */
+    height: 40px;
+    width: 100%;
+    padding: 0 14px;
+
+    /* Font */
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+
+    /* Colors */
+    background-color: #F3F3F3;
+
+    /* Others */
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: none;
+}
+
+/* Text field - focus */
+.text-field:focus {
+    outline: none;
+}
+
+/* Text field - placeholder */
+.text-field::placeholder {
+    /* Font */
+    font-style: italic;
+
+    /* Colors */
+    color: #9F9F9F;
+}
+
+/* Text field icon */
+.text-field-container .icon {
+    /* Position */
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    /* Display */
+    display: flex;
+    align-items: center;
+
+    /* Sizes */
+    padding: 0 14px;
+    height: 100%;
+
+}
+
+/*
+ #########################
+
+   WEATHER MODAL COMPONENT
+
+ #########################
+*/
+
+/* Modal */
+.modal {
+    /* Position */
+    position: absolute;
+
+    /* Sizes */
+    width: 100%;
+    max-width: 600px;
+    padding-bottom: 30px;
+
+    /* Colors */
+    background-color: #FFFFFF;
+    box-shadow: 0 -16px 40px rgba(0, 0, 0, 0.2);
+
+    /* Border */
+    box-sizing: border-box;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+
+/*
+ #########################
+
+   SIMPLE GRID
+
+ #########################
+*/
+
+/* Row */
+.row {
+    /* Display */
+    display: flex;
+    justify-content: space-evenly;
+
+    /* Sizes */
+    width: 100%;
+    margin-top: 41px;
+}
+
+/* Column */
+.col {
+    /* Display */
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+
+    /* Sizes */
+    width: 95px;
+    max-width: 95px;
+    height: 95px;
+}
+
+.col.card {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 8px 0;
+}
+
+/* Column default title */
+.col h2 {
+    /* Fonts */
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+
+    /* Colors */
+    color: #444444;
+}
+
+/* Column default subtitle */
+.col h3 {
+    /* Fonts */
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 9px;
+
+    /* Colors */
+    color: #999999;
+}
+
+@media screen and (max-width: 400px) {
+    /* Column default subtitle */
+    .col h3 {
+        /* Fonts */
+        font-size: 8px;
+    }
+}
+
+/*
+ #########################
+
+   WEATHER INFO COMPONENT
+
+ #########################
+*/
+
+/* No cities in config */
+.not-available-text {
+    /* Sizes */
+    margin-top: 45px;
+
+    /* Font */
+    font-size: 24px;
+    line-height: 17px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+
+    /* Colors */
+    color: #999999;
+}
+
+/* Weather info header */
+.weather-info-container .header {
+    display: flex;
+    width: 100%;
+}
+
+/* Weather info header item */
+.weather-info-container .header .item {
+    /* Display */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Sizes */
+    height: 48px;
+
+    /* Font */
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+/* Weather info header item - update date */
+.weather-info-container .header .update-date {
+    /* Sizes */
+    width: 100%;
+
+    /* Border */
+    border-top-left-radius: 24px;
+
+    /* Colors */
+    color: #999999;
+}
+
+/* Weather info header item - select city button */
+.weather-info-container .header .select-city-button {
+    /* Sizes */
+    min-width: 140px;
+    width: max-content;
+    max-width: 200px;
+
+    /* Border */
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    border: none;
+
+    /* Colors */
+    color: rgb(13, 159, 234);
+    background-color: rgba(13, 159, 234, 0.08);
+}
+
+/* Weather info header item - select city button icon */
+.weather-info-container .header .select-city-button .icon {
+    padding-right: 4px;
+}
+
+/* Weather type item */
+
+.weather-type-item {
+    /* Display */
+    justify-content: center;
+}
+
+.weather-type-item h2 {
+    /* Font */
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+
+/* Temperature item */
+.temperature-item h2 {
+    /* Position */
+    position: relative;
+
+    /* Font */
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 77px;
+}
+
+/* Temperature item - celsius */
+.temperature-item h2 small {
+    /* Position */
+    position: absolute;
+    right: -24px;
+
+    /* Font */
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 42px;
+
+    /* Colors */
+    color: #666666
+}
+
+/* Temperature variation item */
+.temperature-variation-item small {
+    /* Fonts */
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* Colors */
+    color: #666666;
+}
+
+/* Forecast item */
+.weather-forecast-item h3 small {
+    padding: 0 4px;
+}
+
+/*
+ #########################
+
+   WEATHER CITY SEARCH MODAL COMPONENT
+
+ #########################
+*/
+
+/* Container */
+.search-container {
+    /* Sizes */
+    margin: 0 24px;
+}
+
+/* Title */
+.search-title {
+    /* Sizes */
+    margin-top: 35px;
+
+    /* Font */
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    text-align: center;
+
+    /* Colors */
+    color: #999999;
+}
+
+/* Search */
+.search-input {
+    /* Sizes */
+    margin-top: 35px;
+}
+
+/* Search items - cities */
+.search-items {
+    /* Display */
+    display: flex;
+    flex-direction: column;
+
+    /* Sizes */
+    margin-top: 35px;
+    padding: 0 14px;
+
+    /* Others */
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Search item - margins  */
+.search-items .search-item:not(:first-child) {
+    /* Sizes */
+    margin-top: 6px;
+}
+
+/* Search item button - city */
+.search-item button {
+    /* Display */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Font */
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+
+    /* Colors */
+    color: #444444;
+    background-color: transparent;
+
+    /* Sizes */
+    width: 100%;
+    padding: 0;
+
+    /* Others */
+    border: none;
+    cursor: pointer;
+}
+
+/* Search item button - city temperature */
+.search-items .search-item button small {
+    /* Display */
+    display: flex;
+    justify-content: space-between;
+
+    /* Font */
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 300;
+
+    /* Colors */
+    color: #666666;
+}
+
+/* Search item button - hover */
+.search-item button:hover, .search-item button:active {
+    border-radius: 6px;
+    background-color: rgba(153, 153, 153, 0.1);
+}
+
+/*
+ #########################
+
+   LOADING COMPONENT
+
+ #########################
+*/
+
+/* Loading container */
+.loading-container {
+    /* Position */
+    z-index: 100;
+    position: fixed;
+
+    /* Display */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Sizes */
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+
+    /* Colors */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Loading */
+.loading {
+    /* Sizes */
+    width: 64px;
+    height: 64px;
+
+    /* Others */
+    border: 2px solid rgb(13, 159, 234);
+    border-top: 2px solid #FFFFFF;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+/* Loading spin animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

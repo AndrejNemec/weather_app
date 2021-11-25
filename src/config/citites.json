@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Bratislava",
+    "country": "Slovakia",
+    "location": {
+      "latitude": 48.17145,
+      "longitude": 17.12952
+    }
+  },
+  {
+    "id": 2,
+    "name": "Humenné",
+    "country": "Slovakia",
+    "location": {
+      "latitude": 48.93817,
+      "longitude": 21.90992
+    }
+  },
+  {
+    "id": 3,
+    "name": "Koromľa",
+    "country": "Slovakia",
+    "location": {
+      "latitude": 48.72580,
+      "longitude": 22.29916
+    }
+  },
+  {
+    "id": 4,
+    "name": "Košice",
+    "country": "Slovakia",
+    "location": {
+      "latitude": 48.71999,
+      "longitude": 21.24331
+    }
+  },
+  {
+    "id": 5,
+    "name": "Michalovce",
+    "country": "Slovakia",
+    "location": {
+      "latitude": 48.75780,
+      "longitude": 21.91784
+    }
+  },
+  {
+    "id": 6,
+    "name": "Sobrance",
+    "country": "Slovakia",
+    "location": {
+      "latitude": 48.74514,
+      "longitude": 22.17821
+    }
+  },
+  {
+    "id": 7,
+    "name": "Gbely",
+    "country": "Slovakia",
+    "location": {
+      "latitude": 48.72619,
+      "longitude": 17.09583
+    }
+  },
+  {
+    "id": 8,
+    "name": "Brno",
+    "country": "Czechia",
+    "location": {
+      "latitude": 49.19716,
+      "longitude": 16.60698
+    }
+  }
+]

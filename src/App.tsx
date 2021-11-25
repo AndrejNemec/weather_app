@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import SunImage from './assets/img/sun.png'
+import WeatherCitySearchModal from './components/weather-city-search/WeatherCitySearchModal'
+import WeatherInfoModal from './components/weather-info/WeatherInfoModal'
+import Loading from './components/Loading'
+import {useApp} from './hooks/useApp'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const {
+        loading,
+        cities,
+        currentCity,
+        setCurrentCity,
+        showWeatherSearchCityModal,
+        setShowWeatherSearchCityModal
+    } = useApp()
+
+    const renderModal = () => {
+        if (!showWeatherSearchCityModal)
+            return (
+                <WeatherInfoModal city={currentCity}
+                                  onCityButtonClick={() => setShowWeatherSearchCityModal(true)}
+                />
+            )
+        return (
+            <WeatherCitySearchModal cities={cities}
+                                    onSelectCity={setCurrentCity}
+                                    onOutsideClick={(value) => value && setShowWeatherSearchCityModal(false)}
+            />
+        )
+    }
+
+    const renderLoading = () => {
+        if (loading)
+            return (<Loading/>)
+    }
+
+    return (
+        <>
+            <img src={SunImage} alt="Sunny" className="weather-image"/>
+            {renderModal()}
+            {renderLoading()}
+        </>
+    )
 }
 
-export default App;
+export default App
